@@ -6,8 +6,8 @@ from .import forms
 # Create your views here.
 
 def articleList(request):
-    articles = Article.objects.all().order_by("date")
-    return render(request,"articles/articlesList.html",{"articles":articles})
+    articles = Article.objects.all().order_by('date');
+    return render(request, 'articles/articlesList.html', { 'articles': articles })
 
 def article_detail(request,slug):
     #return HttpResponse(slug)
